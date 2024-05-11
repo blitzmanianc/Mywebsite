@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Silent Chimes</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap">
   <style>
     body {
-      font-family: 'Merriweather', serif;
-      background-color: #191919;
+      font-family: 'Cinzel Decorative', serif;
       color: #dcdcdc;
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      background-image: url('https://media.istockphoto.com/id/1318101781/photo/stone-black-texture-background-dark-cement-wall.webp?b=1&s=170667a&w=0&k=20&c=KZzF_N_cRN5OXL873BJWfKfsBY0qN6cpxXEb_RUpNNs='); /* Textured background image */
     }
     .container {
       max-width: 800px;
@@ -23,29 +23,76 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     }
     h1 {
-      font-size: 36px;
+      font-size: 48px; /* Larger title for emphasis */
       color: #dcdcdc;
       margin-top: 0;
       text-align: center;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Increased text shadow */
+      animation: flicker 1s infinite alternate; /* Ghostly flickering animation */
     }
     p {
       font-size: 18px;
-    }
-    b {
-      color: #ff9800;
+      text-align: center;
+      animation: slideIn 2s ease-out; /* Slide in animation */
     }
     i {
       font-style: italic;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Darker shadow */
+      animation: float 4s ease-in-out infinite alternate; /* Floating animation */
+    }
+
+    @keyframes flicker {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      25%, 75% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 0.2;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>The Silent Chimes</h1>
+    <img src="https://reductress.com/wp-content/uploads/2015/06/clock-tower-820x500.jpg" alt="Clock Tower">
     <p>
       <i>In a sleepy village, a mysterious stranger arrives during a storm. The clock tower's chimes turn erratic, striking fear in the villagers. Lily, a curious girl, sneaks into the tower and discovers it sabotaged. But the twist? The stranger is the clock tower's guardian, and the sabotage was to protect a hidden treasure within.</i>
     </p>
+    <img src="https://i.pinimg.com/originals/97/35/88/9735888abaaf7235fe30130464b2b87d.jpg" alt="Hidden Treasure">
   </div>
 </body>
 </html>
+
